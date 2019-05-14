@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#436399</color>
+    <color name="colorPrimaryDark">#08396b</color>
+    <color name="colorAccent">#7490ca</color>
+    <color name="colorPrimaryTestMode">#0C6257</color>
+    <color name="colorPrimaryDarkTestMode">#054E43</color>
+    <color name="colorAccentTestMode">#07D35D</color>
+    <color name="colorDetailSeparator">#80AAAAAA</color>
+    <color name="colorDetailTextLabel">#2b2b2b</color>
+    <color name="colorWordStatusExcellent">#5bff32</color>
+    <color name="colorWordStatusGood">#fbff3d</color>
+    <color name="colorWordStatusAverage">#ffffbb33</color>
+    <color name="colorWordStatusBad">#f73b3b</color>
+    <color name="colorWordStatusExcluded">#cccccc</color>
+    <color name="colorToolbarText">#ffffff</color>
+    <color name="colorToolbarTextHint">#92ffffff</color>
+</resources>

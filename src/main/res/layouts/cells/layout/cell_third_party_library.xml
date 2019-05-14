@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="listItem"
+            type="lv.latvijaff.sugoinihongo.ui.listitems.ThirdPartyLibraryListItem"/>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:sugoi_nihongo="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/detail_view_padding_horizontal"
+        android:paddingVertical="@dimen/detail_view_padding_vertical">
+
+        <lv.latvijaff.sugoinihongo.ui.controls.UrlTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Clickable"
+            android:layout_marginBottom="@dimen/list_item_third_party_library_text_margin"
+            android:textSize="@dimen/list_item_font_size_header"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            sugoi_nihongo:underlinedText="@{listItem.name}"
+            sugoi_nihongo:urlText="@{listItem.projectUrl}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/list_item_third_party_library_text_margin"
+            android:text="@{listItem.text}"/>
+
+        <ViewStub
+            android:id="@+id/list_item_third_party_lib_view_stub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</layout>

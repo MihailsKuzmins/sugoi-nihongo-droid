@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <variable name="isVisible" type="Boolean" />
+    </data>
+
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_item_read_separator_height"
+        android:background="@color/colorDetailSeparator"
+        android:visibility="@{(isVisible ?? true) ? View.VISIBLE : View.GONE}"/>
+</layout>

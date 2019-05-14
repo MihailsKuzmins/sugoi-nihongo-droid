@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sugoi_nihongo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/list_item_third_party_library_text_margin"
+        android:text="@string/licence_apache_2_paragraph_1"/>
+
+    <lv.latvijaff.sugoinihongo.ui.controls.UrlTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Clickable"
+        android:layout_marginBottom="@dimen/list_item_third_party_library_text_margin"
+        android:textColor="?attr/colorPrimary"
+        sugoi_nihongo:underlinedText="@string/licence_apache_2_url"
+        sugoi_nihongo:urlText="@string/licence_apache_2_url"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/list_item_third_party_library_text_margin"
+        android:text="@string/licence_apache_2_paragraph_2"/>
+</LinearLayout>

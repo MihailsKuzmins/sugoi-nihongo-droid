@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="detailItem" type="lv.latvijaff.sugoinihongo.ui.detailitems.DetailItemTextView"/>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/detail_view_padding_horizontal"
+        android:visibility="@{detailItem.isVisible}">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{detailItem.header}"
+            android:textColor="@color/colorDetailTextLabel"
+            android:textSize="@dimen/detail_view_label_text_size"
+            android:paddingTop="@dimen/detail_view_padding_vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{detailItem.value}"
+            android:textSize="@dimen/detail_view_text_size"
+            android:paddingBottom="@dimen/detail_view_padding_vertical"/>
+    </LinearLayout>
+</layout>

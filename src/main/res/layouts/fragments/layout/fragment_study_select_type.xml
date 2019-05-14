@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="lv.latvijaff.sugoinihongo.features.study.StudySelectTypeViewModel"/>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".features.study.StudySelectTypeFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:autoSizeMaxTextSize="@dimen/general_default_text_height"
+                android:layout_weight="@{viewModel.excellentCount}"
+                android:numericText="@{viewModel.excellentCount}"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:background="@color/colorWordStatusExcellent"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:autoSizeMaxTextSize="@dimen/general_default_text_height"
+                android:layout_weight="@{viewModel.goodCount}"
+                android:numericText="@{viewModel.goodCount}"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:background="@color/colorWordStatusGood"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:autoSizeMaxTextSize="@dimen/general_default_text_height"
+                android:layout_weight="@{viewModel.averageCount}"
+                android:numericText="@{viewModel.averageCount}"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:background="@color/colorWordStatusAverage"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:autoSizeMaxTextSize="@dimen/general_default_text_height"
+                android:layout_weight="@{viewModel.badCount}"
+                android:numericText="@{viewModel.badCount}"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:background="@color/colorWordStatusBad"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:autoSizeMaxTextSize="@dimen/general_default_text_height"
+                android:layout_weight="@{viewModel.excludedCount}"
+                android:numericText="@{viewModel.excludedCount}"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:background="@color/colorWordStatusExcluded"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/study_select_type_find_word_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/study_find_word"
+            android:enabled="@{viewModel.quizEnabled}"/>
+
+        <Button
+            android:id="@+id/study_select_type_recognise_word_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/study_recognise_word"
+            android:enabled="@{viewModel.quizEnabled}"/>
+
+        <Button
+            android:id="@+id/study_select_type_list_of_words_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/study_list_of_words"
+            android:enabled="@{viewModel.listOfWordsEnabled}"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="listItem"
+            type="lv.latvijaff.sugoinihongo.ui.listitems.StudyWordListItem"/>
+        <variable
+            name="viewHolder"
+            type="lv.latvijaff.sugoinihongo.features.study.StudyListOfWordsListAdapter.ViewHolder"/>
+    </data>
+
+    <TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/Clickable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{listItem.text}"
+        android:textSize="@dimen/study_list_of_words_text_size"
+        android:paddingHorizontal="@dimen/list_item_padding"
+        android:paddingVertical="@dimen/study_list_of_words_vertical_padding"
+        android:onClick="@{() -> viewHolder.itemClickedAction(listItem)}"/>
+</layout>

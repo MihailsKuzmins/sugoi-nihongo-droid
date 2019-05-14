@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="dialogItem"
+            type="lv.latvijaff.sugoinihongo.ui.dialogitems.StudyWordDialogItem"/>
+    </data>
+
+    <TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dialog_padding_horizontal"
+        android:paddingTop="@dimen/dialog_padding_top"
+        android:textSize="@dimen/dialog_message_text"
+        android:text="@{dialogItem.text}"/>
+</layout>

@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "lv.latvijaff.sugoinihongo"
+        minSdkVersion 26
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.3"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    dataBinding {
+        enabled = true
+    }
+    sourceSets {
+        main {
+            res.srcDirs =
+                [
+                    'src/main/res/layouts/activities',
+                    'src/main/res/layouts/cells',
+                    'src/main/res/layouts/detail-items',
+                    'src/main/res/layouts/activities',
+                    'src/main/res/layouts/dialogs',
+                    'src/main/res/layouts/fragments',
+                    'src/main/res/layouts/list-headers',
+                    'src/main/res/layouts/misc',
+                    'src/main/res/layouts',
+                    'src/main/res'
+                ]
+        }
+    }
+}
+
+dependencies {
+    // Android
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha04'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha5'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.1.0-alpha04'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04"
+
+    // General
+    api 'com.google.guava:guava:27.1-jre'
+    implementation 'com.jakewharton:process-phoenix:2.0.0'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    // Japanese
+    implementation 'com.andree-surya:moji4j:1.2.0'
+
+    // Di
+    implementation 'com.google.dagger:dagger:2.22.1'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.22.1'
+
+    // Rx
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha2'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-core:3.0.0-alpha2'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-material:3.0.0-alpha2'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-appcompat:3.0.0-alpha2'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-viewpager:3.0.0-alpha2'
+    implementation 'com.f2prateek.rx.preferences2:rx-preferences:2.0.0'
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-core:16.0.9'
+    implementation 'com.google.firebase:firebase-firestore:19.0.0'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.0'
+    implementation 'com.google.firebase:firebase-storage:17.0.0'
+
+    // Material design
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha05'
+    implementation 'com.google.android.material:material:1.1.0-alpha06'
+
+    // Tests
+    testImplementation 'junit:junit:4.13-beta-2'
+    androidTestImplementation 'androidx.test:runner:1.2.0-alpha05'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha05'
+}

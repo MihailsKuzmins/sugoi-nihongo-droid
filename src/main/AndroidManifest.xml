@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="lv.latvijaff.sugoinihongo">
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Base">
+        <service
+            android:name=".features.android.services.SystemBackupSynchronisationService"
+            android:exported="false"></service>
+        <service
+            android:name=".features.android.services.SystemBackupCreationService"
+            android:exported="false" />
+        <service
+            android:name=".features.android.services.WordUnusedWordMarkReductionService"
+            android:exported="false" />
+
+        <activity android:name=".features.android.activities.WordFavouritesListContentActivity" />
+        <activity android:name=".features.android.activities.WordSecondaryPropsReadContentActivity" />
+        <activity android:name=".features.android.activities.WordSearchListContentActivity" />
+        <activity android:name=".features.android.activities.SentenceSearchListContentActivity" />
+        <activity android:name=".features.android.activities.GrammarRuleSearchListContentActivity" />
+        <activity android:name=".features.android.activities.SettingsTechContentActivity" />
+        <activity android:name=".features.android.activities.StudyResultContentActivity" />
+        <activity android:name=".features.android.activities.StudyQuizContentActivity" />
+        <activity android:name=".features.android.activities.StudyListOfWordsListContentActivity" />
+        <activity android:name=".features.android.activities.StudySelectTypeContentActivity" />
+        <activity android:name=".features.android.activities.SettingsAboutListContentActivity" />
+        <activity android:name=".features.android.activities.SettingsStudyContentActivity" />
+        <activity android:name=".features.android.activities.SettingsListContentActivity" />
+        <activity android:name=".features.android.activities.WordReadContentActivity" />
+        <activity android:name=".features.android.activities.SentenceReadContentActivity" />
+        <activity android:name=".features.android.activities.GrammarRuleReadContentActivity" />
+        <activity android:name=".features.android.activities.GrammarRuleEditContentActivity" />
+        <activity android:name=".features.android.activities.SentenceEditContentActivity" />
+        <activity android:name=".features.android.activities.WordEditContentActivity" />
+        <activity
+            android:name=".features.android.activities.LanguageMainTabbedActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

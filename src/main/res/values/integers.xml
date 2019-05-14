@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="edit_text_multiline_count">8</integer>
+    <integer name="edit_text_multiline_count_min">6</integer>
+    <integer name="edit_text_multiline_count_max">10</integer>
+</resources>

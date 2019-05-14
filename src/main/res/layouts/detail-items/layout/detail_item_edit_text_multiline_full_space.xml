@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="detailItem" type="lv.latvijaff.sugoinihongo.ui.detailitems.DetailItemEditTextMultiline"/>
+    </data>
+
+    <com.google.android.material.textfield.TextInputLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@{detailItem.hint}"
+        android:labelFor="@id/detail_item_multiline_full_space_edit_text">
+
+        <EditText
+            android:id="@+id/detail_item_multiline_full_space_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="no"
+            android:gravity="top|start"
+            android:inputType="textMultiLine|textCapSentences"
+            android:scrollbars="vertical"
+            android:text="@={detailItem.value}"
+            android:textSize="@dimen/detail_view_text_size"/>
+    </com.google.android.material.textfield.TextInputLayout>
+</layout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="viewModel" type="lv.latvijaff.sugoinihongo.features.grammarrule.GrammarRuleDetailReadViewModel"/>
+    </data>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".features.grammarrule.GrammarRuleDetailReadFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Id -->
+            <include
+                layout="@layout/detail_item_text_view"
+                bind:detailItem="@{viewModel.idItem}"/>
+
+            <include layout="@layout/detail_item_separator"/>
+
+            <!-- Header -->
+            <include
+                layout="@layout/detail_item_text_view"
+                bind:detailItem="@{viewModel.headerItem}"/>
+
+            <include layout="@layout/detail_item_separator"/>
+
+            <!-- Body -->
+            <include
+                layout="@layout/detail_item_text_view"
+                bind:detailItem="@{viewModel.bodyItem}"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>

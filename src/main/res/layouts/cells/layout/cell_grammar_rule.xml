@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="listItem"
+            type="lv.latvijaff.sugoinihongo.ui.listitems.GrammarRuleListItem"/>
+        <variable
+            name="viewHolder"
+            type="lv.latvijaff.sugoinihongo.features.grammarrule.GrammarRuleListAdapter.ViewHolder"/>
+    </data>
+
+    <lv.latvijaff.sugoinihongo.ui.controls.CustomTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/Clickable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/list_item_font_size_text"
+        android:padding="@dimen/list_item_padding"
+        android:text="@{listItem.text}"
+        android:onClick="@{() -> viewHolder.itemClickedAction(listItem.id)}"/>
+</layout>

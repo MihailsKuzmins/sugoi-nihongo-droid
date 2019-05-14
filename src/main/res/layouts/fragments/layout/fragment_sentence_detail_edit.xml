@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="viewModel" type="lv.latvijaff.sugoinihongo.features.sentence.SentenceDetailEditViewModel"/>
+    </data>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".features.sentence.SentenceDetailEditFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/detail_view_padding_horizontal"
+            android:paddingVertical="@dimen/detail_view_padding_vertical">
+
+            <!-- English -->
+            <include
+                android:id="@+id/sentence_detail_edit_input_layout_english"
+                layout="@layout/detail_item_edit_text_multiline"
+                bind:detailItem="@{viewModel.englishItem}"/>
+
+            <!-- Translation -->
+            <include
+                android:id="@+id/sentence_detail_edit_input_layout_translation"
+                layout="@layout/detail_item_edit_text_multiline"
+                bind:detailItem="@{viewModel.translationItem}"/>
+
+            <!-- Transcription -->
+            <include
+                android:id="@+id/sentence_detail_edit_input_layout_transcription"
+                layout="@layout/detail_item_edit_text_multiline"
+                bind:detailItem="@{viewModel.transcriptionItem}"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>

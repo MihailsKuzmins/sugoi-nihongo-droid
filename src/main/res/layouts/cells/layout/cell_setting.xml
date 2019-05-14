@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="listItem"
+            type="lv.latvijaff.sugoinihongo.ui.listitems.SettingListItem"/>
+        <variable
+            name="viewHolder"
+            type="lv.latvijaff.sugoinihongo.features.system.SettingsListAdapter.ViewHolder"/>
+    </data>
+
+    <lv.latvijaff.sugoinihongo.ui.controls.CustomRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/Clickable"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_setting_height"
+        android:padding="@dimen/list_item_padding"
+        android:onClick="@{() -> viewHolder.itemClickedAction(listItem.id)}">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            app:imageResource="@{listItem.image}"
+            android:contentDescription="@string/general_study" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/list_item_setting_text_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:textSize="@dimen/list_item_font_size_header"
+                android:textColor="@color/colorDetailTextLabel"
+                android:text="@{listItem.title}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="top"
+                android:textSize="@dimen/list_item_font_size_description"
+                android:text="@{listItem.description}"/>
+        </LinearLayout>
+    </lv.latvijaff.sugoinihongo.ui.controls.CustomRelativeLayout>
+</layout>
